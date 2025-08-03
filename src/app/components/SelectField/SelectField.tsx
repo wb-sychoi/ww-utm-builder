@@ -1,0 +1,45 @@
+"use client";
+
+import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
+interface SelectOption {
+  label: string;
+  value: string;
+}
+
+interface SelectFieldProps {
+  id: string;
+  label: string;
+  placeholder: string;
+  options: SelectOption[];
+}
+
+export default function SelectField(props: SelectFieldProps) {
+  return (
+    <div className="flex flex-row gap-3 p-2 items-center">
+      <Label htmlFor={props.id}>{props.label}</Label>
+      <Select>
+        <SelectTrigger className="w-[180px]" id={props.id}>
+          <SelectValue placeholder={props.placeholder} />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectGroup>
+            {props.options.map((option, index) => (
+              <SelectItem key={index} value={option.value}>
+                {option.label}
+              </SelectItem>
+            ))}
+          </SelectGroup>
+        </SelectContent>
+      </Select>
+    </div>
+  );
+}
