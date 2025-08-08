@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/core/components/ui/button";
 
 export default function NameGenerator(props: {

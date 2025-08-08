@@ -9,6 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/core/components/ui/select";
+import { useState } from "react";
 
 interface SelectOption {
   label: string;
@@ -23,11 +24,13 @@ interface SelectFieldProps {
 }
 
 export default function SelectField(props: SelectFieldProps) {
+  const [value, setValue] = useState("");
+
   return (
     <div className="flex flex-row gap-3 p-2 items-center">
       <Label htmlFor={props.id}>{props.label}</Label>
-      <Select>
-        <SelectTrigger className="w-[180px]" id={props.id}>
+      <Select value={value} onValueChange={setValue}>
+        <SelectTrigger className="w-[180px]" id={props.id} data-value={value}>
           <SelectValue placeholder={props.placeholder} />
         </SelectTrigger>
         <SelectContent>

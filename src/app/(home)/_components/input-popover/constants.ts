@@ -35,7 +35,7 @@ export const adGroupInputs = [
     description: "위에서 생성된 캠페인명이 자동으로 입력됩니다.",
   },
   {
-    id: "ad_group_name",
+    id: "ad_group_title",
     label: "광고그룹명",
     placeholder: "{아이템}_{아이템}_...",
     description:
