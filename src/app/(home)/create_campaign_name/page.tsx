@@ -1,10 +1,9 @@
-'use client';
+"use client";
 
-import InputPopover from "../components/InputPopover/InputPopover";
-import { campaignInputs } from "../components/InputPopover/constants";
+import InputPopover from "@/app/(home)/_components/input-popover/input-popover";
+import { campaignInputs } from "@/app/(home)/_components/input-popover/constants";
 import { handleCreateCampaignName, handleResetCampaignName } from "./handler";
-import NameGenerator from "../components/NameGenerator/NameGenerator";
-
+import NameGenerator from "@/app/(home)/_components/name-generator/name-generator";
 
 export default function CreateCampaignName() {
   return (

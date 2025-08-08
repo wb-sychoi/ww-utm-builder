@@ -1,9 +1,9 @@
 import * as React from "react";
-import { Button } from "@/components/ui/button";
-import InputPopover from "../components/InputPopover/InputPopover";
-import { adGroupInputs } from "../components/InputPopover/constants";
-import SelectField from "../components/SelectField/SelectField";
-import { adGroupSelects } from "../components/SelectField/constants";
+import { Button } from "@/core/components/ui/button";
+import InputPopover from "@/app/(home)/_components/input-popover/input-popover";
+import { adGroupInputs } from "@/app/(home)/_components/input-popover/constants";
+import SelectField from "@/app/(home)/_components/select-field/select-field";
+import { adGroupSelects } from "@/app/(home)/_components/select-field/constants";
 
 export default function CreateAdGroupName() {
   return (

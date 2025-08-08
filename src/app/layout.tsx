@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import NavigationBar from "./components/NavigationBar/NavigationBar";
+import NavigationBar from "./(home)/_components/navigation-bar/navigation-bar";
 
 export const metadata: Metadata = {
   title: "UTM Builder",
